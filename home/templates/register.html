@@ -1,0 +1,50 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+              crossorigin="anonymous">
+
+    </head>
+    <body>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-light alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+        <div class="buttons">
+            <a href="{% url 'login_request' %}">
+                <button id="login" class="btn-login">Login</button>
+            </a>
+        </div>
+        <div class="register_div" id="register-form">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="div-form">
+                    <p class="p-register">Register</p>
+                    <p class="p-input">Name</p>
+                    {{form.username}}
+                    <p class="p-input">Email</p>
+                    {{form.email}}
+                    <p class="p-input">Password</p>
+                    {{form.password1}}
+                    <p class="p-input">Confirm Password</p>
+                    {{form.password2}}
+                    <input type="submit" class="btn-submit" value="Submit">
+{#                    {{form.errors}}#}
+                </div>
+            </form>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+                crossorigin="anonymous"></script>
+    </body>
+</html>

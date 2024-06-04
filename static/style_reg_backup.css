@@ -1,0 +1,12 @@
+.login_div {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(250, 250, 250, 0.5);
+    border: none;
+    border-radius: 2%;
+    margin: 5% auto;
+    padding: 20px;
+    width: 40%;
+    height: 60%;
+}

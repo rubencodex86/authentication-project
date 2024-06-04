@@ -1,0 +1,41 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="stylesheet" href="{% static 'style_reg.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        {% if messages %}
+            {% for message in messages %}
+                <div>
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        <div class="buttons">
+            <button class="btn-account">Create an Account</button>
+            <a href="{% url 'home' %}">
+            <button class="btn-login">Login</button></a>
+        </div>
+        <div class="login_div">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="div-form">
+                    <p class="p-login">Register New User</p>
+                    <p class="p-input">Name</p>
+                    <input type="text" name="name">
+                    <p class="p-input">E-mail</p>
+                    <input type="email" name="email">
+                    <p class="p-input">Password</p>
+                    <input type="password" name="password">
+                    <p class="p-input">Re-enter your password</p>
+                    <input type="password" name="password-repeat">
+                    <input type="submit" class="btn-submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

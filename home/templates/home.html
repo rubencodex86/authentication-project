@@ -1,0 +1,15 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="buttons">
+            <a href="{% url 'logout_request' %}">
+            <button class="btn-login">Logout</button></a>
+        </div>
+    </body>
+</html>

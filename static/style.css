@@ -1,0 +1,144 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    font-family: 'Arial', sans-serif;
+    z-index: -2;
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+    height: 5%;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 2%;
+    margin-right: 2%;
+}
+
+.btn-account, .btn-submit, .btn-login {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.btn-login {
+    margin-left: 1%;
+}
+
+.btn-account:hover, .btn-account:active,
+.btn-submit:hover, .btn-submit:active,
+.btn-login:hover, .btn-login:active {
+  background-color: white;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.btn-account:active, .btn-submit:active, .btn-login:active {
+  opacity: .5;
+}
+
+.login_div {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(250, 250, 250, 0.5);
+    border: none;
+    border-radius: 2%;
+    margin: 5% auto;
+    padding: 20px;
+    width: 40%;
+    height: 50%;
+    z-index: 5;
+}
+
+.register_div {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(250, 250, 250, 0.5);
+    border: none;
+    border-radius: 2%;
+    margin: 5% auto;
+    padding: 20px;
+    width: 40%;
+    height: 70%;
+    z-index: 5;
+}
+
+.div-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+}
+
+.btn-submit {
+    margin-top: 8%;
+}
+
+.p-login, .p-register {
+    font-size: 24px;
+    color:#3498db;
+    font-weight: bold;
+}
+
+input {
+    border: 0;
+    outline: 0;
+    color: rgb(60, 66, 87);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 16%) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 4px 8px;
+    min-height: 28px;
+    vertical-align: middle;
+    transition: background-color .24s,box-shadow .24s;
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.24s, 0.24s;
+    transition-timing-function: ease, ease;
+    transition-delay: 0s, 0s;
+}
+
+input:focus{
+    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(58 151 212 / 36%) 0px 0px 0px 4px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 16%) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px;
+}
+
+.p-input {
+    font-size: 20px;
+    color: #535c68;
+}
+
+.hidden {
+    display: none;
+}
